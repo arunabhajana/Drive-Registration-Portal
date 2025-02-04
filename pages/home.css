@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+  font-family: 'Manrope', sans-serif;   
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-weight: 400;
+}
+  
+  .navbar {
+    background-color: #f0f0f0;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-text {
+    margin-right: auto;
+  }
+  
+  .navbar-btns {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navbar-btns button {
+    padding: 8px 16px;
+    background-color: #5ea6ed;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 700;
+  }
+  
+  .navbar-btns button:hover {
+    background-color: #777;
+  }
+  
+  .navbar-line {
+    height: 2px;
+    background-color: #aaa;
+    opacity: 0.25;
+  }
+
+  .welcome-section {
+    position: relative;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .welcome-image {
+    display: block;
+    width: 100%;
+  }
+  
+  .welcome-content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  
+  .welcome-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .get-started-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5ea6ed;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #777;
+  }
+  

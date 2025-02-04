@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration Portal</title>
+    <link rel="stylesheet" href="editreg.css"> </head>
+<body>
+    <header>
+        <h1>Drive Registration Portal</h1>
+        <nav>
+            <a href="/admin-reg">Registrations</a>
+            <a href="/admin-fines">Fines</a>
+            <a href="/admin-feedback">Feedback</a>
+            <button class="new-registration"><a href="new_fine.html">New Fine</a></button>
+            <img src="../images/admin-pic.avif" alt="profile-pic">
+        </nav>
+    </header>
+<div class="navbar-line"></div>
+<div class="form-container">
+    <h1>Edit Fine Details</h1>
+    <form class="form" action="/update-fine" method="POST">
+        <div class="form-group">
+            <label for="fineamount">Fine Amount</label> 
+            <input type="number" id="fineamount" name="fineamount" placeholder="Update the Fine Amount">
+        </div>
+        <div class="form-group">
+            <label for="description">Violation</label>
+            <input type="text" id="description" name="description" placeholder="Update the Description">
+        </div>
+        <button type="submit">Confirm</button>
+    </form>    
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration Portal</title>
+    <link rel="stylesheet" href="editreg.css"> </head>
+<body>
+    <header>
+        <h1>Drive Registration Portal</h1>
+        <nav>
+            <a href="/admin-reg">Registrations</a>
+            <a href="/admin-fines">Fines</a>
+            <a href="/admin-feedback">Feedback</a>
+            <button class="new-registration"><a href="new_fine.html">New Fine</a></button>
+            <img src="../images/admin-pic.avif" alt="profile-pic">
+        </nav>
+    </header>
+<div class="navbar-line"></div>
+<div class="form-container">
+    <h1>Editing Vehicle Registrations</h1>
+    <form class="form" action="/update-registration" method="POST">
+        <div class="form-group">
+            <label for="PermanentPlate">Permanent NumberPlate</label>
+            <input type="text" id="PermanentPlate" name="PermanentPlate" placeholder="Enter The Permanent Number Plate">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" id="status" name="status" placeholder="Update The Status">
+        </div>
+        <button type="submit">Confirm</button>
+    </form>    
+  </div>
+</body>
+</html>

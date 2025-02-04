@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-weight: 400;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: #eee;
+}
+
+nav img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.navbar-line {
+    height: 2px;
+    background-color: #aaa;
+    opacity: 0.25;
+}
+
+.new-registration {
+    padding: 8px 16px;
+    background-color: #5ea6ed;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 700;
+}
+
+.new-registration:hover {
+    background-color: #777;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.wel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.welcome-text {
+    flex: 1;
+    color: #333;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.left-container,
+.right-container {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.left-container h2,
+.right-container h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.view-more {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5ea6ed;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.view-more:hover {
+    background-color: #777;
+}

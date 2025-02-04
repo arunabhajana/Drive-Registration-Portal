@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fines</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+        body {
+        font-family: 'Manrope', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-weight: 400;
+    }
+
+    table {
+        margin-top: 50px;
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 12px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    header {
+        background-color: #f0f0f0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+
+    nav a:hover {
+        background-color: #eee;
+    }
+
+    nav img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .navbar-line {
+        height: 2px;
+        background-color: #aaa;
+        opacity: 0.25;
+    }
+
+    .new-registration {
+        padding: 8px 16px;
+        background-color: #5ea6ed;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: 700;
+    }
+
+    .new-registration:hover {
+        background-color: #777;
+    }
+
+    .pay-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 20px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pay-button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Vehicle Registration Portal</h1>
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/fines">Fines</a>
+        <a href="/registrations">Registrations</a>
+        <button class="new-registration"><a href="new_reg.html">New Registration</a></button>
+        <img src="../images/profile-pic.jpeg" alt="profile-pic">
+    </nav>
+</header>
+<div class="navbar-line"></div>
+<table>
+    <thead>
+    <tr>
+        <th>FineID</th>
+        <th>Vehicle Make</th>
+        <th>Fine Amount</th>
+        <th>Fine Date</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% fines.forEach(fine => { %>
+    <tr>
+        <td><%= fine.FineID %></td>
+        <td><%= fine.VehicleMake %></td>
+        <td>₹<%= fine.FineAmount %></td>
+        <td><%= fine.FineDate %></td>
+        <td><%= fine.Description %></td>
+        <td>
+            <form action="/redirect-to-payment" method="POST">
+                <input type="hidden" name="fineID" value="<%= fine.FineID %>">
+                <button type="submit" class="pay-button">Pay</button>
+            </form>
+        </td>
+        
+    <% }); %>
+    </tbody>
+</table>
+</body>
+</html>
