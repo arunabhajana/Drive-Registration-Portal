@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: 'ENTER HOST NAME EX: localhost',
   user: 'ENTER SQL USERNAME',
   password: 'ENTER SQL PASSWORD',
   database: 'ENTER SQL DATABASE NAME'
@@ -62,7 +62,7 @@ app.post('/adminlogin', (req, res) => {
       return res.status(500).send('Internal Server Error');
     }
     if (result.length > 0) {
-      res.redirect('/admin-reg'); // Redirect to admin registrations page
+      res.redirect('/admin-reg');
     } else {
       res.status(401).send('Invalid email or password');
     }
