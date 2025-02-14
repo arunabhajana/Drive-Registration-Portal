@@ -12,9 +12,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: '1234',
-  database: 'project'
+  user: 'ENTER SQL USERNAME',
+  password: 'ENTER SQL PASSWORD',
+  database: 'ENTER SQL DATABASE NAME'
 });
 
 
